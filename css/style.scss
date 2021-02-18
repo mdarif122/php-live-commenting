@@ -1,0 +1,122 @@
+
+$color1: rgb(0, 225, 255);
+$color2: rgb(16, 173, 95); 
+
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(246, 251, 255);
+}
+
+.container
+{
+    width: 100%;
+    max-width: 700px;
+    margin: 50px auto;
+    background: rgb(246, 251, 255);
+}
+
+.arif-comments
+{
+    .header
+    {
+        border-bottom: 1px solid #bebebe57;
+
+        div
+        {
+            display: inline-block;
+            padding: 0 0 0px 0;
+        }
+        .left
+        {
+            //float: left;
+            .comments-count
+            {
+                border-bottom: 2px solid $color2;
+                padding: 0 5px 10px 0;
+            }
+        }
+        .right
+        {
+            float: right;
+
+            select 
+            {
+                border: none;
+            }
+        }
+    }
+
+    .body
+    {
+        margin-top: 30px;
+
+        .comment
+        {
+            margin-top: 5px;
+            display: flex;
+            // .avatar, .details
+            // {
+            //     display: inline-block;
+            // }
+            .avatar
+            {
+                width: 50px;
+
+                img 
+                {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 100%;
+                    border: 2px solid $color1;
+                    padding: 2px;
+                }    
+            }
+            .details
+            {
+                margin-left: 15px;
+
+                span 
+                {
+                    opacity: 0.6;
+                    font-weight: 600;
+                    font-size: 70%;
+                    margin: 10px;
+                }
+                .head
+                {
+                    margin: 5px 0;
+                }
+                .main-comment
+                {
+                    .replied-to
+                    {
+                        font-size: 13px;
+                        opacity: 0.7;
+                    }
+                    p 
+                    {
+                        margin: 8px 0;
+                        line-height: 22px;
+                        letter-spacing: 0.6px;
+                        font-size: 15px;
+                    }
+                    span 
+                    {
+                        font-size: 80%;
+                    }
+                }
+                .replies
+                {
+                    margin-top: 10px;
+                }
+            }
+            
+        }
+    }
+}
+
+
+

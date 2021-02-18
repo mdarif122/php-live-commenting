@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f6fbff;
+}
+
+.container {
+  width: 100%;
+  max-width: 700px;
+  margin: 50px auto;
+  background: #f6fbff;
+}
+
+.arif-comments .header {
+  border-bottom: 1px solid #bebebe57;
+}
+
+.arif-comments .header div {
+  display: inline-block;
+  padding: 0 0 0px 0;
+}
+
+.arif-comments .header .left .comments-count {
+  border-bottom: 2px solid #10ad5f;
+  padding: 0 5px 10px 0;
+}
+
+.arif-comments .header .right {
+  float: right;
+}
+
+.arif-comments .header .right select {
+  border: none;
+}
+
+.arif-comments .body {
+  margin-top: 30px;
+}
+
+.arif-comments .body .comment {
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.arif-comments .body .comment .avatar {
+  width: 50px;
+}
+
+.arif-comments .body .comment .avatar img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 2px solid #00e1ff;
+  padding: 2px;
+}
+
+.arif-comments .body .comment .details {
+  margin-left: 15px;
+}
+
+.arif-comments .body .comment .details span {
+  opacity: 0.6;
+  font-weight: 600;
+  font-size: 70%;
+  margin: 10px;
+}
+
+.arif-comments .body .comment .details .head {
+  margin: 5px 0;
+}
+
+.arif-comments .body .comment .details .main-comment .replied-to {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.arif-comments .body .comment .details .main-comment p {
+  margin: 8px 0;
+  line-height: 22px;
+  letter-spacing: 0.6px;
+  font-size: 15px;
+}
+
+.arif-comments .body .comment .details .main-comment span {
+  font-size: 80%;
+}
+
+.arif-comments .body .comment .details .replies {
+  margin-top: 10px;
+}
+/*# sourceMappingURL=style.css.map */
