@@ -112,4 +112,46 @@
 .arif-comments .body .comment .details .replies {
   margin-top: 10px;
 }
+
+.arif-comments .add-comment {
+  width: 100%;
+  margin-top: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.arif-comments .add-comment .avatar {
+  width: 50px;
+}
+
+.arif-comments .add-comment .avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  border: 2px solid #00e1ff;
+  padding: 2px;
+}
+
+.arif-comments .add-comment .comment-area {
+  width: 100%;
+  margin-left: 15px;
+}
+
+.arif-comments .add-comment .comment-area .comment-textarea {
+  width: 100%;
+  height: auto;
+  min-height: 60px;
+  margin-bottom: 10px;
+  padding: 12px;
+}
+
+.arif-comments button.submit-comment {
+  width: 100px;
+  height: 30px;
+  border: none;
+  background: #10ad5f;
+  color: #fff;
+}
 /*# sourceMappingURL=style.css.map */

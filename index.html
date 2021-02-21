@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 
 </head>
 <body>
@@ -19,6 +21,15 @@
 
 <div class="arif-comments">
     
+    <div class="add-comment">
+        <div class="avatar">
+            <img src="https://i.pinimg.com/474x/2d/6e/c6/2d6ec6dab9946acabd4c4322a31c6b44.jpg" alt="">
+        </div>
+        <div class="comment-area">
+            <textarea placeholder="Start the discussion..." class="comment-textarea"></textarea>
+            <button class="submit-comment">Add Comment</button>
+        </div>
+    </div>
     <!-- coments header -->
     <div class="header">
         
@@ -121,6 +132,75 @@
 
 </div>
 
+
+<script>
+
+
+//- fireup the fisrt comments
+$.ajax({
+    url : "http://localhost:12",
+    type: "GET",
+    success: (data) => {
+        data.forEach(comment => {
+            console.log(comment)
+        });
+    }
+});
+
+function comment_body (name, avatar, time, replied, comment, likes, dislikes)
+{
+    return `
+    <div class="comment">
+            <div class="avatar">
+                <img src="${avatar}" alt="">
+            </div>
+            <div class="details">
+                <div class="head">
+                    
+                    <strong>${name}</strong>
+                    <span> 
+                        <i class="far fa-clock"></i>
+                         ${time}                          
+                    </span>
+
+                </div>
+
+                <div class="main-comment">
+                    <div class="replied-to">
+                    ${ replied ? '' : '| <i class="far fa-comments"></i><i> replied to <a href="#'+replied+'">'+replied+'</a> </i>'}
+                    </div>
+                    <p>
+                        ${comment}
+                    </p>
+                    <div class="footer">
+                        <span class="like span"> 
+                            <i class="fas fa-thumbs-up"></i>
+                            <span>${likes}</span>
+                        </span>
+                        <span class="dislike span">
+                            <i class="fas fa-thumbs-down"></i>
+                            <span>${dislikes}</span>
+                        </span>
+                        <span class="span">
+                            <i class="fas fa-reply"></i>
+                            <span>Reply</span>
+                        </span>
+                    </div>
+                </div>
+
+                <!-- Replied to this commenta -->
+                <div class="replies">
+                    <!-- same "single comment template" -->
+                    
+                </div>
+
+            </div>
+        </div>
+    `;
+}
+
+
+</script>
 
 
 </body>

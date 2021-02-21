@@ -141,6 +141,55 @@ $color2: rgb(16, 173, 95);
             
         }
     }
+
+    .add-comment
+    {
+        width: 100%;
+        margin-top: 5px;
+        display: flex;
+        margin-bottom: 20px;
+        // .avatar, .details
+        // {
+        //     display: inline-block;
+        // }
+        .avatar
+        {
+            width: 50px;
+
+            img 
+            {
+                width: 50px;
+                height: 50px;
+                border-radius: 100%;
+                border: 2px solid $color1;
+                padding: 2px;
+            }    
+        }
+        .comment-area
+        {
+            width: 100%;
+            margin-left: 15px;
+
+            .comment-textarea
+            {
+                width: 100%;
+                height: auto;
+                min-height: 60px;
+                margin-bottom: 10px;
+                padding: 12px;
+            }
+        }
+    }
+
+    button.submit-comment
+    {
+        width: 100px;
+        height: 30px;
+        border: none;
+        background: $color2;
+        color: #fff;
+    }
+
 }
 
 
